@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+/* Container do Header */
+.header-adocao {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 2px solid #f0f0f0; /* Linha cinza clarinha embaixo */
+}
+
+/* Área da Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.heart-icon {
+    color: #ff5a94; /* Rosa da logo */
+    font-size: 32px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.paw-inside {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-left: 12px;
+    
+    /* Aplicando o degradê */
+    background: linear-gradient(90deg, #ff5a94, #ff8c00); /* Do rosa para o laranja */
+    -webkit-background-clip: text; /* Corta o fundo no formato do texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar o fundo */
+    
+    /* Garante que o efeito funcione também em navegadores sem -webkit */
+    background-clip: text;
+    color: transparent;
+    
+}
+
+
+/* Área dos Ícones */
+.icons-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagem-patinha {
+    filter: sepia(100%) saturate(500%) hue-rotate(10deg); /* Isso força a imagem a ficar em tons de laranja/amarelo */
+}
+.logo-patinha {
+    color: #FF8C00; /* Use exatamente o mesmo código de cor do seu texto ThorMania */
+    font-size: 24px;
+    margin-left: 10px;
+   
+
+}
+
+
+.menu-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-circle i {
+    font-size: 20px;
+    color: #000;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: sans-serif;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-menu {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: 0.3s;
+    background: white;
+}
+
+.card-menu:hover {
+    border-color: #FF8C00;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px;
+}
+
+.card-menu img {
+    width: 65px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+}
