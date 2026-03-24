@@ -124,3 +124,20 @@ body {
     color: #444;
     text-align: center;
 }
+/*Area de pesquisa*/
+.search-box {
+    display : flex;
+    align-items: center;
+    background-color: #9e9898;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 14px;
+    width: 120px;
+    transition: width 0.3s ease;
+}
+
+.search-icon {
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+}
