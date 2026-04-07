@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThorMania</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <header class="header-adocao">
     <div class="container d-flex justify-content-between align-items-center">
@@ -30,101 +31,114 @@
         
     </div>
 </header>
-
-<div class="container my-4">
-    <div class="row g-2 justify-content-center">
-        
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoAdotar.webp" alt="Adotar">
-                        <span class="card-text">ADOTAR</span>
+<main>
+    <div class="container my-4">
+        <div class="row g-2 justify-content-center">
+            
+            <div id="adotar" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoAdotar.webp" alt="Adotar">
+                            <span class="card-text">ADOTAR</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+            <div id="adotar-page" class="col-6 col-md-3" style="display: none;">
+                <h2>Adote um Pet</h2>
+                <p>Encontre o companheiro perfeito para você! Navegue por nossos pets disponíveis para adoção e dê a eles um lar cheio de amor.</p>
+                <div id="pet-list">
 
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoDoar.webp" alt="Doar">
-                        <span class="card-text">DOAR</span>
+                </div>
+                </div>
+            </div>
+
+            <div id="doar" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoDoar.webp" alt="Doar">
+                            <span class="card-text">DOAR</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoFeirasAdocao.webp" alt="Feiras">
-                        <span class="card-text">FEIRAS DE ADOÇÃO</span>
+            <div id="feiras" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoFeirasAdocao.webp" alt="Feiras">
+                            <span class="card-text">FEIRAS DE ADOÇÃO</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoPerdi.webp" alt="Perdi">
-                        <span class="card-text">PERDI UM PET</span>
+            <div id="perdi" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoPerdi.webp" alt="Perdi">
+                            <span class="card-text">PERDI UM PET</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoEncontrei.webp" alt="Encontrei">
-                        <span class="card-text">ENCONTREI UM PET</span>
+            <div id="encontrei" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoEncontrei.webp" alt="Encontrei">
+                            <span class="card-text">ENCONTREI UM PET</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoBlog.webp" alt="Blog">
-                        <span class="card-text">BLOG</span>
+            <div id="blog" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoBlog.webp" alt="Blog">
+                            <span class="card-text">BLOG</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoONGs.webp" alt="ONGs">
-                        <span class="card-text">ONGS</span>
+            <div id="ongs" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoONGs.webp" alt="ONGs">
+                            <span class="card-text">ONGS</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="col-6 col-md-3">
-            <a href="#" class="card-link">
-                <div class="card h-100 card-menu">
-                    <div class="card-body">
-                        <img src="imagens/icoCadastrarEventos.webp" alt="Evento">
-                        <span class="card-text">CADASTRAR EVENTO</span>
+            <div id="eventos" class="col-6 col-md-3">
+                <a href="#" class="card-link">
+                    <div class="card h-100 card-menu">
+                        <div class="card-body">
+                            <img src="imagens/icoCadastrarEventos.webp" alt="Evento">
+                            <span class="card-text">CADASTRAR EVENTO</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
+        </div>
     </div>
-</div>
-    
+</main>
 
+<footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2024 ThorMania. Todos os direitos reservados.</p>
+    </div>
+</footer>
 </body>
 </html>
