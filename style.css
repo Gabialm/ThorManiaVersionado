@@ -189,3 +189,13 @@ body {
     filter: brightness(0) invert(1); /* Isso transforma o ícone preto em branco */
     opacity: 1;
 }
+/* boas vindas*/
+.boasvindas {
+    font-family: 'Fredoka', sans-serif !important; /* A fonte nova */
+    font-size: 20px;                    /* Deixa um pouco maior */
+    font-weight: 600;                   /* Deixa levemente negrito */
+    color: #ff6b00;                     /* Usei o laranja do seu header, mas pode ser preto */
+    text-align: center;                 /* Centraliza para alinhar com o menu */
+    margin-top: 15px;                   /* Dá um respiro pro topo */
+    margin-bottom: 10px;
+}
