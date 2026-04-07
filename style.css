@@ -141,3 +141,47 @@ body {
     font-size: 18px;
     cursor: pointer;
 }
+
+/* --- ESTILIZAÇÃO DO MENU LATERAL THORMANIA --- */
+
+/* 1. O Cabeçalho (Fundo em Transição) */
+#menuLateral .offcanvas-header {
+    background: linear-gradient(135deg, #FF69B4, #FF8C00); /* Rosa para Laranja */
+    color: white; /* Garante que o texto fique branco */
+}
+
+/* 2. O Título (Texto Branco no Fundo Colorido) */
+#menuLateral .offcanvas-title {
+    color: white;
+    font-weight: bold;
+    /* Para adicionar o logo (coração + patinha) */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* 3. Estilo dos Itens do Menu (Efeito de Link) */
+#menuLateral .list-group-item-action {
+    color: #555; /* Cor cinza padrão */
+    font-weight: 500;
+    transition: all 0.3s ease; /* Transição suave */
+    border: none; /* Remove bordas */
+}
+
+/* 4. Efeito de Hover (Passar o Mouse) */
+#menuLateral .list-group-item-action:hover {
+    background-color: transparent; /* Remove o fundo padrão */
+    background: linear-gradient(135deg, #FF69B4, #FF8C00); /* Transição suave ao passar o mouse */
+    color: white; /* Texto fica branco */
+    padding-left: 20px; /* Efeito visual de mover o texto */
+}
+
+/* 5. Estilo do Botão de Fechar (Ícone X) */
+#menuLateral .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Torna o X branco */
+}
+
+#menuLateral .btn-close {
+    filter: brightness(0) invert(1); /* Isso transforma o ícone preto em branco */
+    opacity: 1;
+}
