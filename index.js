@@ -1,19 +1,19 @@
 let pets = [
     {
         id: 1,
-        name: 'Rex',
-        age: 3,
-        raça: 'Labrador',
-        description: 'Um cachorro amigável e brincalhão.',
-        image: 'https://example.com/rex.jpg'
+        nome: 'Rex',
+        idade: 3,
+        raca: 'Labrador',
+        descricao: 'Um cachorro amigável e brincalhão.',
+        imagem: 'https://example.com/rex.jpg'
     },
     {
         id: 2,
-        name: 'Mia',
-        age: 2,
-        raça: 'Poodle',
-        description: 'Uma cachorra inteligente e carinhosa.',
-        image: 'https://example.com/mia.jpg'
+        nome: 'Mia',
+        idade: 2,
+        raca: 'Poodle',
+        descricao: 'Uma cachorra inteligente e carinhosa.',
+        imagem: 'https://example.com/mia.jpg'
     },
 ];
 
@@ -24,10 +24,11 @@ function displayPets() {
         const petCard = `
             <div class="col-12 col-md-6">
                 <div class="card h-100">
-                    <img src="${pet.image}" class="card-img-top" alt="${pet.name}">
+                    <img src="${pet.imagem}" class="card-img-top" alt="${pet.nome}">
                     <div class="card-body">
-                        <h5 class="card-title">${pet.name}</h5>
-                        <p class="card-text">${pet.raça}, ${pet.age} anos.</p>
+                        <h5 class="card-title">${pet.nome}</h5>
+                        <p class="card-text">${pet.raca}, ${pet.idade} anos.</p>
+                        <p class="card-text">${pet.descricao}</p>
                         <a href="#" class="btn btn-primary">Adotar</a>
                     </div>
                 </div>
