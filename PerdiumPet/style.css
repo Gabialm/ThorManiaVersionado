@@ -1,0 +1,114 @@
+/*fonte da ana*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.heart-icon {
+    color: #ff5a94;
+    font-size: 32px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.paw-inside {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-left: 12px;
+
+    background: linear-gradient(90deg, #ff5a94, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+}
+
+/*formulario de desaparecimento*/
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+/*muito "leve" pro clima de desaparecimento?*/
+input:focus, textarea:focus {
+    border-color: #ff5a94;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 90, 148, 0.3);
+}
+input[type="file"] {
+    border: none;
+}
+button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #ff5a94, #ff8c00);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+.preview {
+    margin-top: 12px;
+    text-align: center;
+}
+.preview img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+}
