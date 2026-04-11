@@ -146,56 +146,113 @@ body {
     cursor: pointer;
 }
 
-/* --- ESTILIZAÇÃO DO MENU LATERAL THORMANIA --- */
-
-/* 1. O Cabeçalho (Fundo em Transição) */
-#menuLateral .offcanvas-header {
-    background: linear-gradient(135deg, #FF69B4, #FF8C00); /* Rosa para Laranja */
-    color: white; /* Garante que o texto fique branco */
+/* Limpa o fundo do menu */
+.offcanvas {
+    background-color: white !important;
 }
 
-/* 2. O Título (Texto Branco no Fundo Colorido) */
-#menuLateral .offcanvas-title {
-    color: white;
-    font-weight: bold;
-    /* Para adicionar o logo (coração + patinha) */
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Espaço entre o ícone e o texto */
+/* Deixa o topo colorido */
+.offcanvas-header {
+    background: linear-gradient(45deg, #ff416c, #ff9800) !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+
 }
 
-/* 3. Estilo dos Itens do Menu (Efeito de Link) */
-#menuLateral .list-group-item-action {
-    color: #555; /* Cor cinza padrão */
-    font-weight: 500;
-    transition: all 0.3s ease; /* Transição suave */
-    border: none; /* Remove bordas */
+/* Garante que o ícone e o X fiquem brancos no topo */
+.offcanvas-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
 }
 
-/* 4. Efeito de Hover (Passar o Mouse) */
-#menuLateral .list-group-item-action:hover {
-    background-color: transparent; /* Remove o fundo padrão */
-    background: linear-gradient(135deg, #FF69B4, #FF8C00); /* Transição suave ao passar o mouse */
-    color: white; /* Texto fica branco */
-    padding-left: 20px; /* Efeito visual de mover o texto */
+
+/* Garante que os links fiquem brancos por padrão */
+.list-group-item {
+    background-color: transparent !important;
+    color: black !important;
+    border: none;
 }
 
-/* 5. Estilo do Botão de Fechar (Ícone X) */
-#menuLateral .btn-close {
-    filter: invert(1) grayscale(100%) brightness(200%); /* Torna o X branco */
-}
-
-#menuLateral .btn-close {
-    filter: brightness(0) invert(1); /* Isso transforma o ícone preto em branco */
-    opacity: 1;
-}
-/* boas vindas*/
 .boasvindas {
-    font-family: 'Fredoka', sans-serif !important; /* A fonte nova */
-    font-size: 20px;                    /* Deixa um pouco maior */
-    font-weight: 600;                   /* Deixa levemente negrito */
-    color: #ff6b00;                     /* Usei o laranja do seu header, mas pode ser preto */
-    text-align: center;                 /* Centraliza para alinhar com o menu */
-    margin-top: 15px;                   /* Dá um respiro pro topo */
-    margin-bottom: 10px;
+    font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif; 
+    color: #ff9800 !important; /* Laranja */
+    text-align: center;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 1. Estilo padrão dos itens do menu */
+.list-group-item-action {
+    transition: all 0.4s ease; /* Aqui acontece a mágica da suavidade */
+    background-color: transparent !important;
+    color: rgb(0, 0, 0) !important;
+    border: none;
+    display: block;
+    padding: 10px 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* 2. O efeito ao passar o mouse (Hover) */
+.list-group-item-action:hover {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b) !important;
+    color: white !important;
+    
+    /* Faz o item "saltar" levemente para o lado ou para frente */
+    transform: translateX(10px); /* Move 10px para a direita */
+    /* Se preferir que ele cresça, use: transform: scale(1.05); */
+    
+    border-radius: 15px; /* Arredonda os cantos durante a animação */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombrinha */
+}
+
+/* Estilo exclusivo para a página Quem Somos */
+.pagina-quemsomos {
+    font-family: 'Sniglet', cursive;
+    background-color: #fefefe;
+    color: #444;
+    padding: 20px;
+}
+
+/* Deixando os títulos laranjas e fofinhos */
+.pagina-quemsomos h2, 
+.pagina-quemsomos h3,
+.pagina-quemsomos b,
+.pagina-quemsomos strong {
+    color: #fca311;
+    font-weight: 800;
+}
+
+/* O título principal ThorMania com o gradiente que você gosta */
+.pagina-quemsomos h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+}
+
+/* Ajustando o texto para não ficar grudado na tela */
+.pagina-quemsomos p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+/* Link de voltar com estilo de botão */
+.pagina-quemsomos a[href*="index"] {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.pagina-quemsomos a[href*="index"]:hover {
+    transform: scale(1.1);
 }
