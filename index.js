@@ -1,53 +1,78 @@
-let pets = [
-    {
-        id: 1,
-        nome: 'Rex',
-        idade: 3,
-        raca: 'Labrador',
-        descricao: 'Um cachorro amigável e brincalhão.',
-        imagem: 'https://example.com/rex.jpg'
-    },
-    {
-        id: 2,
-        nome: 'Mia',
-        idade: 2,
-        raca: 'Poodle',
-        descricao: 'Uma cachorra inteligente e carinhosa.',
-        imagem: 'https://example.com/mia.jpg'
-    },
-];
+const petsData = async function() {
+    try {
+        const response = await fetch('./data.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Erro na requisição dos dados dos pets:', error);
+    }
+};
+
+const pets = petsData();
 
 function displayPets() {
     const petList = document.getElementById('pet-list');
     petList.innerHTML = '';
-    pets.forEach(pet => {
-        const petCard = `
-            <div class="col-12 col-md-6">
-                <div class="card h-100">
-                    <img src="${pet.imagem}" class="card-img-top" alt="${pet.nome}">
-                    <div class="card-body">
-                        <h5 class="card-title">${pet.nome}</h5>
-                        <p class="card-text">${pet.raca}, ${pet.idade} anos.</p>
-                        <p class="card-text">${pet.descricao}</p>
-                        <a href="#" class="btn btn-primary">Adotar</a>
-                    </div>
+    pets.then(pets => {
+        pets.forEach(pet => {
+            const petCard = `
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <img src="${pet.imagem}" class="card-img-top" alt="${pet.nome}">
+                        <div class="card-body">
+                            <h5 class="card-title">${pet.nome}</h5>
+                            <p class="card-text">${pet.raca}, ${pet.idade} anos.</p>
+                            <p class="card-text">${pet.descricao}</p>
+                            <a href="#" class="btn btn-primary">Adotar</a>
+                            <a href="#" class="btn btn-secondary botao-voltar">Voltar</a>
+                        </div>
                 </div>
             </div>
         `;
-        petList.innerHTML += petCard;
+            petList.innerHTML += petCard;
+        });
+
+        const botoesVoltar = document.querySelectorAll('.botao-voltar');
+        botoesVoltar.forEach(botao => {
+            botao.addEventListener('click', function(event) {
+                event.preventDefault();
+                adotarID.style.display = '';
+                doarID.style.display = '';
+                feirasID.style.display = '';
+                perdiID.style.display = '';
+                encontreiID.style.display = '';
+                blogID.style.display = '';
+                ongsID.style.display = '';
+                eventosID.style.display = '';
+                adotarPageID.style.display = 'none';
+            });
+        });
     });
 }
 
-const adotar = document.getElementById('adotar').addEventListener('click', function() {
-    document.getElementById('adotar').style.display = 'none';
-    document.getElementById('doar').style.display = 'none';
-    document.getElementById('feiras').style.display = 'none';
-    document.getElementById('perdi').style.display = 'none';
-    document.getElementById('encontrei').style.display = 'none';
-    document.getElementById('blog').style.display = 'none';
-    document.getElementById('ongs').style.display = 'none';
-    document.getElementById('eventos').style.display = 'none';
+const adotarID = document.getElementById('adotar');
+const doarID = document.getElementById('doar');
+const feirasID = document.getElementById('feiras');
+const perdiID = document.getElementById('perdi');
+const encontreiID = document.getElementById('encontrei');
+const blogID = document.getElementById('blog');
+const ongsID = document.getElementById('ongs');
+const eventosID = document.getElementById('eventos');
+const adotarPageID = document.getElementById('adotar-page');
 
-    document.getElementById('adotar-page').style.display = '';
+
+const adotar = document.getElementById('adotar').addEventListener('click', function(event) {
+    event.preventDefault();
+    adotarID.style.display = 'none';
+    doarID.style.display = 'none';
+    feirasID.style.display = 'none';
+    perdiID.style.display = 'none';
+    encontreiID.style.display = 'none';
+    blogID.style.display = 'none';
+    ongsID.style.display = 'none';
+    eventosID.style.display = 'none';
+    adotarPageID.style.display = '';
+    
     displayPets();
 });
+
