@@ -10,7 +10,7 @@ const petsData = async function() {
 
 const pets = petsData();
 
-function displayPets() {
+const displayPets = () => {
     const petList = document.getElementById('pet-list');
     petList.innerHTML = '';
     pets.then(pets => {
@@ -34,7 +34,7 @@ function displayPets() {
 
         const botoesVoltar = document.querySelectorAll('.botao-voltar');
         botoesVoltar.forEach(botao => {
-            botao.addEventListener('click', function(event) {
+            botao.addEventListener('click', (event) => {
                 event.preventDefault();
                 adotarID.style.display = '';
                 doarID.style.display = '';
@@ -61,7 +61,7 @@ const eventosID = document.getElementById('eventos');
 const adotarPageID = document.getElementById('adotar-page');
 
 
-const adotar = document.getElementById('adotar').addEventListener('click', function(event) {
+const adotar = document.getElementById('adotar').addEventListener('click', (event) => {
     event.preventDefault();
     adotarID.style.display = 'none';
     doarID.style.display = 'none';
