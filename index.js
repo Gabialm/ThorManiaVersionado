@@ -1,4 +1,4 @@
-const petsData = async function() {
+const petsData = async () => {
     try {
         const response = await fetch('./data.json');
         const data = await response.json();
