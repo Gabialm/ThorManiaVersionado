@@ -24,31 +24,14 @@ const displayPets = () => {
                             <p class="card-text">${pet.raca}, ${pet.idade} anos.</p>
                             <p class="card-text">${pet.descricao}</p>
                             <a href="#" class="btn btn-primary">Adotar</a>
-                            <a href="#" class="btn btn-secondary botao-voltar">Voltar</a>
                         </div>
                 </div>
             </div>
         `;
             petList.innerHTML += petCard;
         });
-
-        const botoesVoltar = document.querySelectorAll('.botao-voltar');
-        botoesVoltar.forEach(botao => {
-            botao.addEventListener('click', (event) => {
-                event.preventDefault();
-                adotarID.style.display = '';
-                doarID.style.display = '';
-                feirasID.style.display = '';
-                perdiID.style.display = '';
-                encontreiID.style.display = '';
-                blogID.style.display = '';
-                ongsID.style.display = '';
-                eventosID.style.display = '';
-                adotarPageID.style.display = 'none';
-            });
-        });
     });
-}
+};
 
 const adotarID = document.getElementById('adotar');
 const doarID = document.getElementById('doar');
@@ -59,9 +42,23 @@ const blogID = document.getElementById('blog');
 const ongsID = document.getElementById('ongs');
 const eventosID = document.getElementById('eventos');
 const adotarPageID = document.getElementById('adotar-page');
+const menu = document.getElementById('menuLateral');
+const inicio = document.getElementById('inicio-btn');
 
+inicio.addEventListener('click', (event) => {
+    event.preventDefault();
+    adotarID.style.display = '';
+    doarID.style.display = '';
+    feirasID.style.display = '';
+    perdiID.style.display = '';
+    encontreiID.style.display = '';
+    blogID.style.display = '';
+    ongsID.style.display = '';
+    eventosID.style.display = '';
+    adotarPageID.style.display = 'none';
+});
 
-const adotar = document.getElementById('adotar').addEventListener('click', (event) => {
+const adotar = adotarID.addEventListener('click', (event) => {
     event.preventDefault();
     adotarID.style.display = 'none';
     doarID.style.display = 'none';
