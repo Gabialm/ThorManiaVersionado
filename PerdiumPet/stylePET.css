@@ -82,6 +82,24 @@
 /* copiei do css da ana pra ficar igual */
 
 
+.logo-link{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.logo-area{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: inherit;
+
+    cursor: pointer;
+}
+
 
 /*formulario*/
 .file {
