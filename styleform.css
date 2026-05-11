@@ -1,38 +1,371 @@
-body{  
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-     background: linear-gradient(90deg, #ff5a94, #ff8c00);
-    display:flex;
-    justify-content: center;
-    height: 100vh;
+/* Importando as fontes oficiais do seu projeto */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Quicksand:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+.header-adocao {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 2px solid #f0f0f0; /* Linha cinza clarinha embaixo */
 }
-body{
-}
-h1{
-    color: rgb(255, 255, 255);
-}
-input{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 20px;
-    background: white;
-}
-.remember{
+
+/* Área da Logo */
+.logo-area {
     display: flex;
     align-items: center;
-    font-size:14px;
-    margin: 10px 0;
-}
-button{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 20px;
-     background: linear-gradient(90deg, #ff5a94, #ff8c00);
-    color: white;
-    font-size: 16px;
     cursor: pointer;
+}
+
+.heart-icon {
+    color: #ff5a94; /* Rosa da logo */
+    font-size: 32px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.paw-inside {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-left: 12px;
+    
+    /* Aplicando o degradê */
+    background: linear-gradient(90deg, #ff5a94, #ff8c00); /* Do rosa para o laranja */
+    -webkit-background-clip: text; /* Corta o fundo no formato do texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar o fundo */
+    
+    /* Garante que o efeito funcione também em navegadores sem -webkit */
+    background-clip: text;
+    color: transparent;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* --- HEADER (IGUAL À IMAGEM) --- */
+.header-adocao {
+    background-color: #ffffff;
+    padding: 10px 5%;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center; /* Centraliza o container interno */
+}
+
+.header-adocao .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex !important;
+    justify-content: space-between !important; /* Logo na esquerda, Ícones na direita */
+    align-items: center !important;
+}
+
+/* Logo Area */
+.logo-area {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.heart-icon {
+    font-size: 24px;
+    color: #ff6b81;
+    position: relative;
+    margin-right: 10px;
+}
+
+.paw-inside {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.logo-text {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff6b81;
+}
+
+/* Mania em Laranja */
+.logo-text::after {
+    content: "Mania";
+    color: #ff9f43;
+}
+
+/* Ícones da Direita */
+.icons-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-icon {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+
+.menu-circle {
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid #333 !important;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* --- FORMULÁRIO CENTRALIZADO --- */
+.cadastro-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 85vh; /* Centraliza verticalmente na tela */
+    padding: 20px;
+}
+
+.form-card {
+    background: #ffffff !important;
+    padding: 40px !important;
+    border-radius: 25px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05) !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    text-align: center !important;
+}
+
+.form-card h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: #ff6b81;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #f1f1f1;
+    border-radius: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho */
+}
+
+.form-card input:focus {
+    border-color: #ff6b81;
+    background-color: #fffafa;
+}
+
+/* Botão Estilo ThorMania */
+.btn-cadastrar {
+    background: #ff6b81 !important;
+    color: white !important;
+    border: none !important;
+    padding: 16px !important;
+    width: 100% !important;
+    border-radius: 50px !important;
+    font-family: 'Fredoka', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    margin-top: 15px !important;
+    transition: 0.3s !important;
+    box-shadow: 0 5px 15px rgba(255, 107, 129, 0.2) !important;
+}
+
+.btn-cadastrar:hover {
+    background: #ff4d6d !important;
+    transform: translateY(-2px);
+}
+/* Garante que o container do header use todo o espaço */
+.header-adocao .container {
+    display: flex !important;
+    max-width: 100% !important;
+    padding: 0 20px;
+}
+
+/* Estilo do Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6b81;
+}
+.logo-area span span { color: #ff9f43; } /* Cor do "Mania" */
+
+/* Estilo dos Ícones da Direita */
+.icons-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+/* CORREÇÃO CRÍTICA: Esconde o menu lateral por padrão */
+/* Isso evita que os links fiquem aparecendo no topo da página */
+.offcanvas:not(.show) {
+    display: none !important;
+}
+
+.offcanvas.show {
+    display: flex !important;
+}
+
+/* Centralização do Formulário */
+.cadastro-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 80vh;
+}
+/* --- HEADER --- */
+.header-adocao {
+    background-color: #fff !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #eee !important;
+    width: 100% !important;
+}
+
+.header-adocao .container {
+    display: flex !important;
+    flex-direction: row !important; /* Força ficar em linha */
+    justify-content: space-between !important; /* Logo na esquerda, Ícones na direita */
+    align-items: center !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+/* --- ÁREA DOS ÍCONES (LUPA + MENU) --- */
+.icons-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important; /* Espaço entre lupa e menu */
+}
+
+.search-icon {
+    font-size: 18px !important;
+    color: #000 !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+}
+
+.menu-circle {
+    width: 40px !important;
+    height: 40px !important;
+    border: 1.5px solid #000 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: none !important;
+    padding: 0 !important;
+}
+/* --- CORREÇÃO DO MENU LATERAL --- */
+
+/* Esconde o menu por padrão (Isso resolve o erro da sua imagem!) */
+.offcanvas:not(.show) {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+/* Largura do Menu */
+.offcanvas {
+    width: 320px !important;
+    border: none !important;
+}
+
+/* Cabeçalho com o Degradê Rosa/Laranja */
+.header-colorido {
+    background: linear-gradient(to right, #ff2d78, #ff8c2f) !important;
+    padding: 25px 20px !important;
+}
+
+/* Logo Branco dentro do menu */
+.titulo-menu {
+    font-family: 'Fredoka', sans-serif;
+    color: white !important;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.heart-menu {
+    color: white !important;
+    font-size: 26px;
+    position: relative;
+}
+
+.paw-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    color: #ff2d78 !important; /* Rosa igual ao fundo */
+}
+
+/* Texto de Boas-vindas em Laranja */
+.texto-bem-vindo {
+    color: #ff9f43 !important;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+/* Estilo dos Links */
+.offcanvas-body .list-group-item {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: #333 !important;
+    border: none !important;
+    padding: 15px 25px !important;
+}
+
+.offcanvas-body .list-group-item:hover {
+    background-color: #fff0f3 !important;
+    color: #ff2d78 !important;
+}
+
+/* Faz o "X" de fechar ficar Branco */
+.btn-close-white {
+    filter: brightness(0) invert(1) !important;
+    opacity: 1 !important;
 }
