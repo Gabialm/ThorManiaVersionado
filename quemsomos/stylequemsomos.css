@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+body {
+    background-color: #ffeef2;
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #ff8fa3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3{
+    color: #ff758f;
+    margin-bottom: 30px;
+}
+
+/* Container que organiza as fileiras */
+.fileira-container {
+    display: flex;
+    flex-wrap: wrap; /* Faz os itens pularem para a linha de baixo */
+    justify-content: center;
+    gap: 20px; /* Espaço entre os cards */
+    max-width: 1000px;
+}
+
+/* Estilo de cada Card (Item da fileira) */
+.card-fofo {
+    background: white;
+    padding: 20px;
+    width: 280px; /* Largura fixa para ficarem alinhados */
+    border-radius: 30px;
+    border: 4px solid #ffc1cc;
+    box-shadow: 5px 5px 0px #ffdae0;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card-fofo:hover {
+    transform: translateY(-5px);
+}
+
+.card-fofo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffeef2;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #ff758f;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #85586f;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.btn-voltar {
+    background: #ff6b81 !important;
+    color: white !important;
+    border: none !important;
+    padding: 16px !important;
+    width: 100% !important;
+    border-radius: 50px !important;
+    font-family: 'Fredoka', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    margin-top: 15px !important;
+    transition: 0.3s !important;
+    box-shadow: 0 5px 15px rgba(255, 107, 129, 0.2) !important;
+}
+
+.btn-voltar:hover {
+    background: #ff4d6d !important;
+    transform: translateY(-2px);
+}
